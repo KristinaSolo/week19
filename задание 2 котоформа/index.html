@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма Котиков</title>
+    <style>
+        .cat {
+            width: 20%;
+        }
+
+        input:required:valid {
+            border-color: rgb(58, 213, 61);
+        }
+
+        .forma {
+            width: 20vw;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Опросник для обладателей котиков.</h2>
+
+    <img class="cat" src="./6ff77967363c8b99e2a4174afe1be508.jpg" alt="cat">
+    <form class="forma">
+        <fieldset>
+            <legend>Контакты владельца:</legend>
+
+            <label for="text">Имя :</label>
+            <input type="text" id="text" required placeholder="Имя" value=""><br>
+            <label for="adres">Email :</label>
+            <input type="email" id="adres" required placeholder="Email" value="">
+            <label for="contact">Телефон :</label>
+            <input type="text" id="contact" placeholder="+79264455755" value="" required minlength="10"
+                maxlength="20" />
+        </fieldset>
+
+        <fieldset>
+            <legend>Информация о котике:</legend>
+
+            <div>
+                <label for="nickname">Кличка питомца:</label>
+                <input type="text" id="nickname" required placeholder="Кличка питомца">
+            </div>
+
+            <div>Порода питомца:
+                <select id="breed">
+                    <option value="" selected>-------</option>
+                    <option value="Сиамская">Сиамская</option>
+                    <option value="Сфинкс">Сфинкс</option>
+                    <option value="Сибирская">Сибирская</option>
+                    <option value="Британская вислоухая">Британская вислоухая</option>
+                    <option value="Шотландская вислоухая">Шотландская вислоухая</option>
+                    <option value="Персидская">Персидская</option>
+                </select>
+            </div>
+
+            <div>Чем питается питомец:<br>
+                <input class="food" type="checkbox" value="Сухой корм">Сухой корм<br> <input class="food"
+                    type="checkbox" value="Влажный корм">Влажный корм<br>
+                <input type="checkbox" class="food" value="Натуральный корм">Натуральный
+                корм
+            </div>
+
+            <div>
+                <label for="text">Какого пола питомец:</label><br>
+                Самец <input type="radio" class="sex" name="sex" value="Самец" required> Самка <input type="radio"
+                    value="Самка" class="sex" name="sex" required>
+
+            </div>
+        </fieldset>
+        <div>Коментарии владельца:
+            <div>
+                <textarea cols="40" rows="10" maxlength="200"> </textarea>
+            </div>
+
+        </div>
+
+        <div>
+            <label for="pfoto">Приложите фото питомца:</label><br>
+            <input type="file" id="pfoto">
+        </div>
+
+        <div>
+            <button id="btn"> Сохранить</button>
+        </div>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
